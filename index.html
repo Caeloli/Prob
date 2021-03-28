@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery-->
+    <script src="./build/Plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="./build/Plugins/bootstrap/css/bootstrap.min.css"
+    />
+    <script src="./build/Plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!--Winwheel-->
+    <script src="./build/Plugins/winwheel/Winwheel.min.js"></script>
+    <!--TweenMax-->
+    <script src="./build/Plugins/tweenmax/TweenMax.min.js"></script>
+    <!--SweetAlert-->
+    <link
+      rel="stylesheet"
+      href="./build/Plugins/sweetalert/css/sweetalert.css"
+    />
+    <script src="./build/Plugins/sweetalert/js/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/build/css/app.css" />
+    <title>Probabilidad y Estadística</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <canvas id="particleCanvas"></canvas>
+      <div class="content header-content">
+        <canvas id="particleCanvasLetters"></canvas>
+        <nav class="navigation">
+          <a href="#members-section" class="green-btn">Integrantes</a>
+          <a href="#roullete-section" class="green-btn">Ruleta</a>
+        </nav>
+      </div>
+    </header>
+    <section class="roullete" id="roullete-section">
+      <span class="circle"></span>
+      <h3 class="align-center">Ruleta</h3>
+      <div class="content roullete-content">
+        <div class="row align-items-center roullete-elements">
+          <!--Lista de premios-->
+          <div class="col-2 text-justify">
+            <div class="card">
+              <h5 class="card-header">Premios:</h5>
+              <br />
+              <textarea id="ListaPremios" class="form-control" rows="10">
+                Premio 1
+                Premio 2
+                Premio 3
+                Premio 4
+                Premio 5
+                </textarea
+              >
+              <br />
+              <input
+                type="button"
+                class="btn btn-outline-success"
+                onclick="leerElementos()"
+                value="Generar Ruleta"
+              />
+            </div>
+          </div>
+
+          <!--Ruleta-->
+          <div class="col-8">
+            <div
+              id="ruletaContainter"
+              class="roulleteContainer"
+              onclick="objRuleta.startAnimation();"
+            >
+              <canvas id="canvas" width="500" height="510">
+                Canvas not supported, use another browser.
+              </canvas>
+            </div>
+
+            <script>
+              let theWheel = new Winwheel();
+            </script>
+          </div>
+
+          <!--Probabilidades-->
+          <div class="col-2">
+            <div class="card probabilityContent" style="width: 15rem">
+              <!--Probabilidad total -->
+              <div class="card">
+                <h6 class="card-header">Tiros m&aacute;ximos</h6>
+                <div class="card-body text-center">
+                  <p class="card-text" style="font-size: 1.4rem">
+                    Ingresa la cantidad de tiros máximos para obtener un premio
+                    en particular:
+                  </p>
+                  <input type="text" id="tirosTotales" class="form-control" />
+                  <br />
+                  <input
+                    type="button"
+                    onclick="generarProbabilidad()"
+                    class="btn btn-outline-primary btn-sm"
+                    value="Obtener Probabilidad"
+                  />
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h6 class="card-header">Probabilidades:</h6>
+                <div
+                  class="card-text"
+                  id="texto"
+                  style="font-size: 1.5rem"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="members" id="members-section">
+      <span class="circle"></span>
+      <div class="content members-content">
+        <h3>Integrantes</h3>
+        <div class="members-box">
+          <ul>
+            <li>Aviles Piña Mauricio</li>
+            <li>Badillo de la Rosa Jorge Antonio</li>
+            <li>González Morelos César Emiliano</li>
+            <li>Mora Ayala José Antonio</li>
+            <li>Torres Carrillo Josehf Miguel Angel</li>
+            <li>Tovar Jacuinde Rodrigo</li>
+            <li>Vázquez Hernández Alan Mauricio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content footer-content">
+        <p>Equipo: Programa</p>
+        <nav class="navigation">
+          <a href="#header">Inicio</a>
+          <a href="#roullete-section">Ruleta</a>
+          <a href="#members-section">Integrantes</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="/build/js/bundle.js"></script>
+  </body>
+</html>
