@@ -1,0 +1,18 @@
+@mixin horizontalLine {
+    content: "";
+    display: block;
+    height: 1rem;
+    background-color: $white;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+    top: -0.5rem;
+    border-radius: 2rem;
+}
+
+@mixin grid($columns, $space) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $space;
+    @content;
+}

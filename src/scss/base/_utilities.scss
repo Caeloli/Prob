@@ -1,0 +1,41 @@
+.circle {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-color: $white;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -3rem;
+    &:before {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        margin: 0 auto;
+        position: relative;
+        border: 0.5rem inset $pink;
+        top: 1rem;
+    }
+}
+
+.green-btn {
+    padding: 2.5rem 0;
+    border: 0.5rem solid $darkBlue;
+    background-color: $darkGreen;
+    width: 30rem;
+    font-size: 3rem;
+    color: $white;
+    font-weight: $bold;
+    text-align: center;
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: $darkBlue;
+        transition: background-color 0.5s;
+    }
+}
+
+.align-center {
+    text-align: center;
+}

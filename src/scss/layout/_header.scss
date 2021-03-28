@@ -1,0 +1,26 @@
+.header {
+    height: 100vh;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#particleCanvas {
+    position: absolute;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    a {
+        color: $white;
+    }
+}

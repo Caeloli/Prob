@@ -1,0 +1,30 @@
+.roullete {
+    height: 98vh;
+    background-color: #eaebf0;
+    h3 {
+        padding: 5rem 0 0 0;
+    }
+
+    .roullete-content {
+        padding: 10rem 0 0 0;
+    }
+
+    &::before {
+        @include horizontalLine;
+    }
+}
+
+.roullete-elements {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .roulleteContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#canvas {
+    cursor: pointer;
+}

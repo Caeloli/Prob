@@ -1,0 +1,41 @@
+.footer {
+    background-color: $green;
+    height: 7rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    p {
+        margin: 0%;
+        color: $white;
+        flex-basis: 40%;
+        color: $darkBlue;
+        font-weight: $bold;
+    }
+    .navigation {
+        justify-content: space-evenly;
+        text-align: center;
+        flex-basis: 30%;
+        height: 100%;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-basis: 50%;
+            height: 100%;
+            color: $darkBlue;
+            font-weight: $bold;
+            transition: color 0.5s;
+            transition: background-color 0.5s;
+            &:hover {
+                color: $white;
+                background-color: $lightGreen;
+                transition: color 0.5s;
+                transition: background-color 0.5s;
+            }
+        }
+    }
+}
